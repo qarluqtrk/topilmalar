@@ -7,7 +7,12 @@ from app.forms import RegisterModelForm
 def signup_view(request):
     if request.method == "POST":
         form = RegisterModelForm(request.POST)
-    return render(request, 'app/auth/signup.html')
+        if form.is_valid():
+            form.save()
+            return redirect("signin")
+
+    form = RegisterModelForm()
+    return render(request, 'app/auth/signup.html', {'form': form})
 
 
 def signin_view(request):

@@ -5,7 +5,7 @@ from django.db.transaction import atomic
 from app.models import User
 
 
-class RegisterModelForm(forms.ModelForm):
+class RegisterModelForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(max_length=155)
     confirm_password = forms.CharField(max_length=155)
@@ -32,3 +32,6 @@ class RegisterModelForm(forms.ModelForm):
 
         user.set_password(self.cleaned_data['password'])
         user.save()
+
+
+
