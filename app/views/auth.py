@@ -1,8 +1,12 @@
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 
+from app.forms import RegisterModelForm
+
 
 def signup_view(request):
+    if request.method == "POST":
+        form = RegisterModelForm(request.POST)
     return render(request, 'app/auth/signup.html')
 
 
