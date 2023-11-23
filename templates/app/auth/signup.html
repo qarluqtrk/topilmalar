@@ -20,6 +20,11 @@
                                             <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/images/logo.svg' %}" class="img-fluid" alt="logo"></a>
                                         </div>
                                         <h4 class="text-primary my-4">Sign Up !</h4>
+                                        {% if messages %}
+                                            {% for message in messages %}
+                                                <p>{{ message }}</p>
+                                            {% endfor %}
+                                        {% endif %}
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
                                         </div>
@@ -42,7 +47,7 @@
                                         </div>
                                       <button type="submit" class="btn btn-success btn-lg btn-block font-18">Register</button>
                                     </form>
-                                    <p class="mb-0 mt-3">Already have an account? <a href="user-login.html">Log in</a></p>
+                                    <p class="mb-0 mt-3">Already have an account? <a href="{% url 'signin' %}">Log in</a></p>
                                 </div>
                             </div>
                         </div>

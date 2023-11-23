@@ -32,6 +32,3 @@ class RegisterModelForm(forms.Form):
 
         user.set_password(self.cleaned_data['password'])
         user.save()
-
-
-
