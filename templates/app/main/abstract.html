@@ -22,17 +22,21 @@
     <!-- Slick css -->
     <link href={% static "assets/plugins/slick/slick.css" %} rel="stylesheet">
     <link href={% static "assets/plugins/slick/slick-theme.css" %} rel="stylesheet">
+    <!-- Dropzone css -->
+    <link href={% static "assets/plugins/dropzone/dist/dropzone.css" %} rel="stylesheet" type="text/css">
     <!-- Switchery css -->
     <link href={% static "assets/plugins/switchery/switchery.min.css" %} rel="stylesheet">
     <link href={% static "assets/css/bootstrap.min.css" %} rel="stylesheet" type="text/css">
     <link href={% static "assets/css/icons.css" %} rel="stylesheet" type="text/css">
     <link href={% static "assets/css/flag-icon.min.css" %} rel="stylesheet" type="text/css">
     <link href={% static "assets/css/style.css" %} rel="stylesheet" type="text/css">
+    <!-- Datepicker css -->
+    <link href={% static "assets/plugins/datepicker/datepicker.min.css" %} rel="stylesheet" type="text/css">
     <!-- End css -->
 </head>
 <body class="vertical-layout">
 {% block content %}
-	
+
 {% endblock %}
 <!-- Start js -->
 <script src={% static "assets/js/jquery.min.js" %}></script>
@@ -57,6 +61,19 @@
 <script src={% static "assets/js/custom/custom-dashboard.js" %}></script>
 <!-- Core js -->
 <script src={% static "assets/js/core.js" %}></script>
+<!-- Dropzone js -->
+<script src={% static "assets/plugins/dropzone/dist/dropzone.js" %}></script>
+<!-- Select2 css -->
+<link href={% static "assets/plugins/select2/select2.min.css" %} rel="stylesheet" type="text/css">
+<!-- Select2 js -->
+<script src={% static "assets/plugins/select2/select2.min.js" %}></script>
+<!-- Datepicker JS -->
+<script src={% static "assets/plugins/datepicker/datepicker.min.js" %}></script>
+<script src={% static "assets/plugins/datepicker/i18n/datepicker.en.js" %}></script>
+<script src={% static "assets/js/custom/custom-form-datepicker.js" %}></script>
+<!-- Input Mask js -->
+<script src={% static "assets/plugins/bootstrap-inputmask/jquery.inputmask.bundle.min.js" %}></script>
+<script src={% static "assets/js/custom/custom-form-inputmask.js" %}></script>
 <!-- End js -->
 </body>
 

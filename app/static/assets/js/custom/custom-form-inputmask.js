@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#inputmask-date').inputmask("date");
     $('#inputmask-time').inputmask("hh:mm");
     $('#inputmask-datetime').inputmask("datetime");
-    $('#inputmask-phone').inputmask("(99) 999-999-9999");
+    $('#inputmask-phone').inputmask("(99) 999-9999");
     $('#inputmask-zipcode').inputmask("999999");
     $('#inputmask-email').inputmask("email");
     $('#inputmask-decimal').inputmask("decimal");

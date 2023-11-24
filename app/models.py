@@ -57,6 +57,7 @@ class Item(models.Model):
     type = models.CharField(max_length=10,
                             choices=Type.choices,
                             default=Type.LOST)
+    date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return self.title
