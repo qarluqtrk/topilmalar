@@ -7,3 +7,6 @@ def index_view(request):
 
 def item_view(request):
     return render(request, 'app/item.html')
+
+
+
