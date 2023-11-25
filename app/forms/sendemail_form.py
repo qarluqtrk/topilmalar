@@ -32,7 +32,7 @@ def send_forget_password_mail(email, request):
     user = User.objects.get(email=email)
     subject = 'Your forget password link'
     current_site = get_current_site(request)
-    message = render_to_string('app/activation_link/activation_account.html', {
+    message = render_to_string('app/activation_link/activate_password.html', {
         'user': user,
         'domain': current_site.domain,
         'uid': urlsafe_base64_encode(force_bytes(str(user.pk))),
@@ -41,6 +41,4 @@ def send_forget_password_mail(email, request):
     from_email = EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, from_email, recipient_list)
-    print('Send to MAIL')
-
     return True
