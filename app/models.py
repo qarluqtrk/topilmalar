@@ -49,8 +49,8 @@ class Item(models.Model):
         FOUND = 'FOUND'
 
     image = models.ImageField(upload_to='item/')
-    title = models.CharField(max_length=255)
-    description = models.TextField()
+    # title = models.CharField(max_length=255)
+    # description = models.TextField()
     contact_name = models.CharField(max_length=255)
     contact_number = models.CharField(max_length=13)
     location = models.CharField(max_length=255)
