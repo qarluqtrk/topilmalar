@@ -35,13 +35,15 @@
                         <div class="row align-items-center ecommerce-sortby">
                             <!-- Start col -->
                             <div class="col-md-12 col-lg-12 col-xl-4">
-                                <select class="form-control" id="productSortBy">
-                                    <option>Price - Low to High</option>
-                                    <option>Price - High to Low</option>
-                                    <option>Newest</option>
-                                    <option>Popularity</option>
-                                    <option>Average Rating</option>
-                                </select>
+                                <form action="{% url 'index' %}" method="GET">
+                                    <select class="form-control" id="productSortBy" name="query">
+{#                                        {% for item in items %}#}
+                                            <option value="FOUND">FOUND</option>
+                                            <option value="LOST">LOST</option>
+{#                                        {% endfor %}#}
+                                    </select>
+                                    <button type="submit">submit</button>
+                                </form>
                             </div>
                             <!-- End col -->
                             <!-- Start col -->
@@ -59,26 +61,26 @@
                         <!-- Start row -->
                         <div class="row">
                             <!-- Start col -->
-                                {% for item in items %}
-                                	<div class="col-lg-6 col-xl-4">
-                                <div class="product-bar m-b-30">
-                                    <div class="product-head">
-                                        <a href="{% url 'item' item.id %}"><img
-                                                src={{ item.image.url }} class="img-fluid"
-                                                alt="product"></a>
-                                    </div>
-                                    <div class="product-body py-3">
-                                        <div class="row align-items-center">
+                            {% for item in items %}
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="product-bar m-b-30">
+                                        <div class="product-head">
+                                            <a href="{% url 'item' item.id %}"><img
+                                                    src={{ item.image.url }} class="img-fluid"
+                                                    alt="product"></a>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <h6 class="mt-1 mb-3">{{ item.title }}</h6>
+                                        <div class="product-body py-3">
+                                            <div class="row align-items-center">
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <h6 class="mt-1 mb-3">{{ item.title }}</h6>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                {% endfor %}
+                            {% endfor %}
 
                             <!-- End col -->
                         </div>
@@ -93,12 +95,12 @@
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <nav aria-label="Page navigation example">
-                                    <ul class="pagination mb-0">
-                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                    </ul>
+{#                                    <ul class="pagination mb-0">#}
+{#                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>#}
+{#                                        <li class="page-item"><a class="page-link" href="#">1</a></li>#}
+{#                                        <li class="page-item"><a class="page-link" href="#">2</a></li>#}
+{#                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>#}
+{#                                    </ul>#}
                                 </nav>
                             </div>
                         </div>

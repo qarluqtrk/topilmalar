@@ -13,7 +13,7 @@
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
                              aria-orientation="vertical">
                             <div class="logobar">
-                                <a href="index.html" class="logo logo-small"><img
+                                <a href="{% url 'index' %}" class="logo logo-small"><img
                                         src={% static "assets/images/small_logo.svg" %}
                                                 class="img-fluid" alt="logo"></a>
                             </div>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="vertical-menu-detail">
                         <div class="logobar">
-                            <a href="index.html" class="logo logo-large"><img
+                            <a href="{% url 'index' %}" class="logo logo-large"><img
                                     src={% static "assets/images/logo.svg" %} class="img-fluid"
                                     alt="logo"></a>
                         </div>
@@ -71,7 +71,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="mobile-logobar">
-                            <a href="index.html" class="mobile-logo"><img
+                            <a href="{% url 'index' %}" class="mobile-logo"><img
                                     src={% static "assets/images/logo.svg" %} class="img-fluid"
                                     alt="logo"></a>
                         </div>
@@ -121,19 +121,19 @@
                                     </div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <div class="searchbar">
-                                        <form>
-                                            <div class="input-group">
-                                                <div class="input-group-append">
-                                                    <button class="btn" type="submit" id="button-addonSearch"><img
-                                                            src={% static "assets/images/svg-icon/search.svg" %} class="img-fluid"
-                                                            alt="search"></button>
-                                                </div>
-                                                <input type="search" class="form-control" placeholder="Search"
-                                                       aria-label="Search" aria-describedby="button-addonSearch">
-                                            </div>
-                                        </form>
-                                    </div>
+{#                                    <div class="searchbar">#}
+{#                                        <form>#}
+{#                                            <div class="input-group">#}
+{#                                                <div class="input-group-append">#}
+{#                                                    <button class="btn" type="submit" id="button-addonSearch"><img#}
+{#                                                            src={% static "assets/images/svg-icon/search.svg" %} class="img-fluid"#}
+{#                                                            alt="search"></button>#}
+{#                                                </div>#}
+{#                                                <input type="search" class="form-control" placeholder="Search"#}
+{#                                                       aria-label="Search" aria-describedby="button-addonSearch">#}
+{#                                            </div>#}
+{#                                        </form>#}
+{#                                    </div>#}
                                 </li>
                             </ul>
                         </div>
