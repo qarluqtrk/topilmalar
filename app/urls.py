@@ -17,7 +17,7 @@ urlpatterns = [
     path('verify_email/', verify_email_view, name='verify_email'),
     path('logout/', logout_view, name='logout'),
     path('my_profile/', my_profile_view, name='my_profile'),
-    path('item/', item_view, name='item'),
+    path('item/<int:item_id>/', item_view, name='item'),
     path('activate/<str:uid>/<str:token>/', ActivateEmailView.as_view(), name='confirm-mail'),
     path('activate_password/<str:uid>/<str:token>/', ActivatePasswordEmailView.as_view(), name='activate_password'),
 

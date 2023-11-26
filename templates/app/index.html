@@ -59,50 +59,27 @@
                         <!-- Start row -->
                         <div class="row">
                             <!-- Start col -->
-                            <div class="col-lg-6 col-xl-4">
+                                {% for item in items %}
+                                	<div class="col-lg-6 col-xl-4">
                                 <div class="product-bar m-b-30">
                                     <div class="product-head">
-                                        <a href="ecommerce-single-product.html"><img
-                                                src={% static "assets/images/ecommerce/product_img_01.jpg" %} class="img-fluid"
+                                        <a href="{% url 'item' item.id %}"><img
+                                                src={{ item.image.url }} class="img-fluid"
                                                 alt="product"></a>
-                                        <p><span class="badge badge-success font-14">20% off</span></p>
                                     </div>
                                     <div class="product-body py-3">
                                         <div class="row align-items-center">
-                                            <div class="col-12">
-                                                <div class="d-inline-block">
-                                                    <span class="text-uppercase font-12 f-w-6">Appliances</span>
-                                                </div>
-                                                <div class="d-inline-block float-right">
-                                                    <i class="feather icon-star text-warning"></i>
-                                                    <i class="feather icon-star text-warning"></i>
-                                                    <i class="feather icon-star text-warning"></i>
-                                                    <i class="feather icon-star"></i>
-                                                    <i class="feather icon-star"></i>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="row align-items-center">
                                             <div class="col-12">
-                                                <h6 class="mt-1 mb-3">Electronic Kettle</h6>
-                                            </div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6">
-                                                <div class="text-left">
-                                                    <h5 class="f-w-7 mb-0"><sup class="font-14">$</sup>75</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="text-right">
-                                                    <button type="button" class="btn btn-primary-rgba font-18"><i
-                                                            class="feather icon-shopping-bag"></i></button>
-                                                </div>
+                                                <h6 class="mt-1 mb-3">{{ item.title }}</h6>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                                {% endfor %}
+
                             <!-- End col -->
                         </div>
                         <!-- Start row -->

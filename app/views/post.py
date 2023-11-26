@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from app.forms.postform import PostModelForm
 from app.models import Item
 
 
+@login_required(login_url='signin')
 def post_view(request):
     if request.method == 'POST':
         form = PostModelForm(request.POST, request.FILES)
@@ -15,4 +17,5 @@ def post_view(request):
     else:
         # If it's a GET request, display the form
         form = PostModelForm()
-    return render(request, 'app/post.html')
+    return render(request, 'app/post.html',
+                  context={'form': form})
