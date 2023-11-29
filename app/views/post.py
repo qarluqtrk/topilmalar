@@ -17,5 +17,7 @@ def post_view(request):
     else:
         # If it's a GET request, display the form
         form = PostModelForm()
-    return render(request, 'app/post.html',
-                  context={'form': form})
+    context = {
+        'form': form
+    }
+    return render(request, 'app/post.html', context)

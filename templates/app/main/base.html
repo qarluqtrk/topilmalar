@@ -139,34 +139,34 @@
                         </div>
                         <div class="infobar">
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item">
-                                    <div class="languagebar">
-                                        <div class="dropdown">
-                                            <a class="dropdown-toggle" href="#" role="button" id="languagelink"
-                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
-                                                    class="live-icon">EN</span><span
-                                                    class="feather icon-chevron-down live-icon"></span></a>
-                                            <div class="dropdown-menu dropdown-menu-right"
-                                                 aria-labelledby="languagelink">
-                                                <a class="dropdown-item" href="#"><i
-                                                        class="flag flag-icon-us flag-icon-squared"></i>English</a>
-                                                <a class="dropdown-item" href="#"><i
-                                                        class="flag flag-icon-de flag-icon-squared"></i>German</a>
-                                                <a class="dropdown-item" href="#"><i
-                                                        class="flag flag-icon-bl flag-icon-squared"></i>France</a>
-                                                <a class="dropdown-item" href="#"><i
-                                                        class="flag flag-icon-ru flag-icon-squared"></i>Russian</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+{#                                <li class="list-inline-item">#}
+{#                                    <div class="languagebar">#}
+{#                                        <div class="dropdown">#}
+{#                                            <a class="dropdown-toggle" href="#" role="button" id="languagelink"#}
+{#                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span#}
+{#                                                    class="live-icon">EN</span><span#}
+{#                                                    class="feather icon-chevron-down live-icon"></span></a>#}
+{#                                            <div class="dropdown-menu dropdown-menu-right"#}
+{#                                                 aria-labelledby="languagelink">#}
+{#                                                <a class="dropdown-item" href="#"><i#}
+{#                                                        class="flag flag-icon-us flag-icon-squared"></i>English</a>#}
+{#                                                <a class="dropdown-item" href="#"><i#}
+{#                                                        class="flag flag-icon-de flag-icon-squared"></i>German</a>#}
+{#                                                <a class="dropdown-item" href="#"><i#}
+{#                                                        class="flag flag-icon-bl flag-icon-squared"></i>France</a>#}
+{#                                                <a class="dropdown-item" href="#"><i#}
+{#                                                        class="flag flag-icon-ru flag-icon-squared"></i>Russian</a>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
                                 {% if user.is_authenticated %}
                                 	<li class="list-inline-item">
                                     <div class="profilebar">
                                         <div class="dropdown">
                                             <a class="dropdown-toggle" href="#" role="button" id="profilelink"
                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                                    src={% static "assets/images/users/profile.svg" %} class="img-fluid"
+                                                    src="https://facts.net/wp-content/uploads/2023/09/21-facts-about-tarzan-tarzan-1694565493.jpg" class="img-fluid"
                                                     alt="profile"><span class="live-icon">{{ user.get_username }}</span><span
                                                     class="feather icon-chevron-down live-icon"></span></a>
                                             <div class="dropdown-menu dropdown-menu-right"
@@ -178,11 +178,11 @@
                                                 </div>
                                                 <div class="userbox">
                                                     <ul class="list-unstyled mb-0">
-                                                        <li class="media dropdown-item">
-                                                            <a href="{% url 'my_profile' %}" class="profile-icon"><img
-                                                                    src={% static "assets/images/svg-icon/crm.svg" %} class="img-fluid"
-                                                                    alt="user">Profilim</a>
-                                                        </li>
+{#                                                        <li class="media dropdown-item">#}
+{#                                                            <a href="{% url 'my_profile' %}" class="profile-icon"><img#}
+{#                                                                    src={% static "assets/images/svg-icon/crm.svg" %} class="img-fluid"#}
+{#                                                                    alt="user">Profilim</a>#}
+{#                                                        </li>#}
                                                         <li class="media dropdown-item">
                                                             <a href="{% url 'logout' %}" class="profile-icon"><img
                                                                     src={% static "assets/images/svg-icon/logout.svg" %}

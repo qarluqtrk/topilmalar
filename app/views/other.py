@@ -13,12 +13,12 @@ def index_view(request):
     context = {
         'items': items
     }
-    return render(request, 'app/index.html', context=context)
+    return render(request, 'app/index.html', context)
+
 
 def item_view(request, item_id):
     item = Item.objects.get(id=item_id)
-    return render(request, 'app/item.html'
-                  , context={'item': item})
-
-
-
+    context = {
+        'item': item
+    }
+    return render(request, 'app/item.html', context)

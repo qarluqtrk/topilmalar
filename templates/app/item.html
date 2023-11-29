@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="widgetbar">
-                    <button class="btn btn-primary-rgba"><i class="feather icon-plus mr-2"></i>Actions</button>
+                    <a href="{% url 'post' %}"><button class="btn btn-primary-rgba"><i class="feather icon-plus mr-2"></i>Actions</button></a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <div class="col-md-6 text-center" style="display: inline-block; margin-left: 200px">
                             <img src="{{ item.image.url }}" class="img-fluid"
-                                 alt="Product" style="max-width: 100%; height: auto;">
+                                 alt="Product" style="max-width: 100%; height: ;">
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,12 @@
                         <div class="tab-content" id="defaultTabContentLine">
                             <div class="tab-pane fade show active" id="description-line" role="tabpanel"
                                  aria-labelledby="description-tab-line">
-                                <p>{{ item.description }}</p>
+                                <h5 style="display: flex; ">Title: <a style="margin-left: 140px; color: red">{{ item.title }}</a></h5>
+                                <h5 style="display: flex">Description: <a style="margin-left: 85px; color: red">{{ item.description }}</a></h5>
+                                <h5 style="display: flex">Contact_name: <a style="margin-left: 65px; color: red">{{ item.contact_name }}</a></h5>
+                                <h5 style="display: flex">Contact_number: <a style="margin-left: 49px; color: red">{{ item.contact_number }}</a></h5>
+                                <h5 style="display: flex">Type: <a style="margin-left: 139px; color: red">{{ item.type }}</a></h5>
+                                <h5 style="display: flex">Date: <a style="margin-left: 139px; color: red">{{ item.date }}</a></h5>
                             </div>
                         </div>
                     </div>
